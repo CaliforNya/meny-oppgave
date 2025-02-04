@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Audiowide";
+    src: url("./Audiowide-Regular.ttf") format("truetype");
+
+}
+
+.name {
+    font-family: "Audiowide", sans-serif;
+    font-size: 3rem;
+    font-weight: 100;
+    color: hsl(9, 100%, 64%);
+    flex-grow: 1;
+
+    text-align: center;
+
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    background-color: #656D4A;
+    padding: 10px 20px;
+    color: #B6AD90;
+    margin: 0;
+}
+
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.nav li {
+    margin-left: 20px;
+}
+
+.nav a {
+
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #B6AD90;
+    transition: color 0.3s ease-in-out;
+
+}
+
+.nav a:hover {
+    color: hsl(9, 100%, 64%);
+}

@@ -1,0 +1,17 @@
+.dishCard {
+    font-weight: 200;
+    color: #B6AD90;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    /* border-bottom: 4px double hsl(9, 100%, 64%);  */
+}
+
+.dishCard h2 {
+    color: hsl(9, 100%, 64%);
+    font-weight: 300;
+    padding-top: 20px;
+}
