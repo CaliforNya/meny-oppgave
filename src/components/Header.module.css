@@ -9,8 +9,6 @@
     font-size: 3rem;
     font-weight: 100;
     color: hsl(9, 100%, 64%);
-    flex-grow: 1;
-
     text-align: center;
 
 }
@@ -19,7 +17,6 @@
 .header {
     display: flex;
     justify-content: space-between;
-
     align-items: center;
     background-color: #656D4A;
     padding: 10px 20px;

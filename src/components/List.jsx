@@ -1,16 +1,38 @@
 import styles from "./List.module.css";
 import { meny } from "./Menu.jsx";
 import DishCard from "./DishCard.jsx";
-
-console.log(meny);
+import { useState } from "react";
+import MenuButton from "./MenuButton.jsx";
 
 const List = () => {
+  const categories = ["Hovedrett", "Forrett", "Dessert"];
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  const showAll = () => {
+    setSelectedCategory("");
+  };
+
+  const filteredMeny = meny.filter((product) =>
+    selectedCategory ? product.kategori === selectedCategory : showAll
+  );
+
   return (
     <>
       <h1>Menu</h1>
+      <div className={styles.buttons}>
+        {categories.map((category, index) => (
+          <MenuButton
+            key={index}
+            category={category}
+            onClick={setSelectedCategory}
+          />
+        ))}
+        <MenuButton key="all" category="All" onClick={showAll} />
+      </div>
+
       <div className={styles.menu}>
         <ul className={styles.list}>
-          {meny.map((product) => (
+          {filteredMeny.map((product) => (
             <li key={product.id} className={styles.listItem}>
               <DishCard {...product} />
             </li>
