@@ -15,11 +15,9 @@ const Header = () => {
             <a href="#menu">Meny</a>
           </li>
           <li>
-            <a href="#about">Om Oss</a>
+            <a href="#about">Om Oss/Kontakt</a>
           </li>
-          <li>
-            <a href="#contact">Kontakt</a>
-          </li>
+      
         </ul>
       </nav>
     </header>

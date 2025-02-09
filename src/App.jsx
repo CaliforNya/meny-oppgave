@@ -1,9 +1,9 @@
-import List from "./components/List.jsx";
 import Header from "./components/Header.jsx";
+import List from "./components/List.jsx";
 import Footer from "./components/Footer.jsx";
 import Photos from "./components/Photos.jsx";
 
-import "./App.css";
+import styles from "./App.module.css";
 
 const images = [
   "./img/bolognese.jpg",
@@ -18,12 +18,18 @@ function App() {
     <>
       <Header />
 
-      <div className="flex justify-center items-center min-h-screen bg-gray-900">
+      <div id="home" className={styles.section}>
         <Photos images={images} />
       </div>
 
-      <List />
-      <Footer />
+      <div id="menu" className={styles.section}>
+        <List />
+      </div>
+
+      <div id="about" className={styles.section}>
+        <Footer />
+      </div>
+
     </>
   );
 }

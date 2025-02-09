@@ -9,27 +9,34 @@ import styles from "./Photos.module.css";
 
 const Photos = ({ images }) => {
   return (
-    <div className={styles.photoContainer}>
-      <Swiper
-        modules={[EffectFade, Navigation, Pagination, Autoplay]}
-        spaceBetween={8}
-        slidesPerView={1}
-        effect={"fade"}
-        navigation
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        loop
-        className={styles.swiperContainer}
-      >
-        {images.map((img, index) => (
-          <SwiperSlide key={index} className={styles.swiperSlide}>
-            <div className={styles.imageContainer}>
-              <img src={img} alt={`Slide ${index}`} className={styles.image} />
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <>
+      <h1> Velkommen til Fusion Feast</h1>
+      <div className={styles.photoContainer}>
+        <Swiper
+          modules={[EffectFade, Navigation, Pagination, Autoplay]}
+          spaceBetween={8}
+          slidesPerView={1}
+          effect={"fade"}
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop
+          className={styles.swiperContainer}
+        >
+          {images.map((img, index) => (
+            <SwiperSlide key={index} className={styles.swiperSlide}>
+              <div className={styles.imageContainer}>
+                <img
+                  src={img}
+                  alt={`Slide ${index}`}
+                  className={styles.image}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </>
   );
 };
 
