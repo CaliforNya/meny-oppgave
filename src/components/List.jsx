@@ -1,5 +1,5 @@
 import styles from "./List.module.css";
-import { meny } from "./Menu.jsx";
+import { meny } from "./menu.jsx";
 import DishCard from "./DishCard.jsx";
 import { useState } from "react";
 import MenuButton from "./MenuButton.jsx";
