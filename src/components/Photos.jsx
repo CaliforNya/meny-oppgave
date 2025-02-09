@@ -1,11 +1,10 @@
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import 'swiper/css/effect-fade';
-import styles from "./Photos.module.css"; 
+import "swiper/css/effect-fade";
+import styles from "./Photos.module.css";
 
 const Photos = ({ images }) => {
   return (
@@ -19,7 +18,7 @@ const Photos = ({ images }) => {
           effect={"fade"}
           navigation
           pagination={{ clickable: true }}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
           loop
           className={styles.swiperContainer}
         >
